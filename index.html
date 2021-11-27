@@ -18,7 +18,7 @@
 </script>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Muzilla Music</title>
+		<title>Walkover - A design and tech startup for startups.</title>
 		<meta name="description"
 			content="A team of young & passionate leaders working towards changing the world through design, technology & ideas. We’re hiring, connect with us for jobs in IT, software & design.">
 		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -115,12 +115,46 @@
 				line-height: 31px
 			}
 
-			.btn-danger {
+			#mybutton {
+				border: 0;
+				border-radius: 31px !important;
 				font-size: 18px;
 				padding: 10px 32px;
-				border-radius: 0;
-				background: #d0000e;
-				border: 1px solid #9a1822
+				color: #000;
+				background-color: #f907fc;
+				background-image: linear-gradient(315deg, #fd7eff 0%, #70d3ff 74%);
+			}
+
+			.circle_avatar{
+				
+				
+				border-radius:80% ;
+				height: 180px;
+				width: 180px;
+			}
+
+			.row {
+				margin-top: 30px;
+			}
+			.top_card{
+				padding-top: 10px;
+				height: 300px;
+				margin: 15px;
+				border-radius: 30px;
+				margin-bottom: 50px !important;
+			}
+			.top_card:hover{
+				box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+			}
+
+			@media only screen and (max-width: 600px) {
+				.row {
+				margin-top: 0 !important  ;
+			}
+			.top_card{
+				margin: 10px 0 0 0 !important;
+				
+			}
 			}
 
 			.btn-danger:hover {
@@ -556,10 +590,13 @@
 					margin-bottom: 20px
 				}
 
-				.btn-danger {
+				/* .btn-danger {
+					border: 2px solid white;
 					margin-top: 20px;
-					margin-bottom: 20px
-				}
+					margin-bottom: 20px;
+					background-color: #f907fc;
+background-image: linear-gradient(315deg, #f907fc 0%, #05d6d9 74%);
+				} */
 			}
 
 			@media(max-width:575px) {
@@ -682,10 +719,24 @@
 				display: flex;
 			}
 
+			#mycd {
+				animation: rotation 8s infinite linear;
+			}
 
-			.nav-item{
+			@keyframes rotation {
+				from {
+					transform: rotate(0deg);
+				}
+
+				to {
+					transform: rotate(359deg);
+				}
+			}
+
+			.nav-item {
 				font-size: larger;
 			}
+
 		</style>
 
 		<link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
@@ -734,21 +785,22 @@
 							<div class="bar3"></div>
 						</button>
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
-							<ul class="navbar-nav ml-auto">
-								<pre>                                                                           </pre>
+							<pre>				</pre>
+							<ul class="navbar-nav ml-auto justify-content-center">
 								<li class="nav-item mr-md-3">
-									<a class="nav-link" href="" target="_blank">Blog</a>
+									<a class="nav-link" href="" target="_blank">Browse</a>
+								</li>
+								<li class="nav-item mr-md-3">
+									<a class="nav-link" href="" target="_blank">Create</a>
 								</li>
 								<li class="nav-item mr-md-3">
 									<a class="nav-link" href="" target="_blank">Mint </a>
 								</li>
 								<li class="nav-item mr-md-3">
-									<a class="nav-link" href="">AboutUs</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="">Join Us</a>
+									<a class="nav-link" href="">Opensea</a>
 								</li>
 							</ul>
+
 						</div>
 					</nav>
 				</div>
@@ -758,21 +810,78 @@
 					<div class="row reverse">
 						<div class="col-md-7 col-lg-7 col-12">
 							<div class="banner-content" style="margin-top: 150px !important; ">
-								
-								<h2 class="bold-sub-heading mb-2">Developers, Designers, Innovators...</h2>
-								<h2 class="bold-heading">Muzillo Music</h2>
-								<p class="custom-p mt-0 font-weight-bold">A journey to innovation!</p>
-								<a href="" class="btn btn-danger">Join us now</a>
+
+								<h2 class="bold-sub-heading mb-2">Developers, Creators, Artists...</h2>
+								<h2 class="bold-heading">Muzilla Music</h2>
+								<p class="custom-p mt-0 font-weight-bold">A Space to Music NFTs</p>
+								<a href="" class="btn btn-danger" id="mybutton">Mint Now</a>
 							</div>
 						</div>
 						<div class="col-md-5 col-lg-5 col-12">
 							<figure>
-								<img class="w-100" src="cd.png" style="margin-top: 90px;">
+								<img class="w-100" src="cd.png" id="mycd" style="margin-top: 90px;">
 							</figure>
 						</div>
 					</div>
 				</div>
 			</section>
+
+
+
+			<center>
+				<div class="grid_section">
+
+					<div class="container">
+						<div class="row">
+							
+							<div class="col-sm  top_card " >
+								<img src="album.jpg"  class="circle_avatar" alt="" >
+								<br><br>
+								<h2>Muzilla Merchandise Store </h2>
+							</div>
+						
+							<div class="col-sm top_card">
+								<img src="ticket.jpg"  class="circle_avatar" alt="" >
+								<br><br>
+								<h2>My Collection</h2>
+							</div>
+							<div class="col-sm top_card">
+								<img src="party.jpg" class="circle_avatar"  alt="" >
+								<br><br>
+								<h2>Top 100 Albums</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm top_card">
+								<img src="single.jpg"  class="circle_avatar" alt="" >
+								<br><br>
+								<h2>Top 100 EPs</h2>
+							</div>
+							<div class="col-sm top_card">
+								<img src="party2.jpg" class="circle_avatar"  alt="" >
+								<br><br>
+								<h2>Top 100 Singles</h2>
+							</div>
+							<div class="col-sm top_card">
+								<img src="album.jpg" class="circle_avatar"  alt="" >
+								<br><br>
+								<h2>Top 100 Gig Tickets</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</center>
+
+
+
+
+
+
+
+
+
+
+
 
 			<section class="section building-box gray-bg" id="section2">
 				<div class="container">
@@ -961,7 +1070,8 @@
 						<div class="row">
 							<div class="col-md-12 col-lg-12 col-12 text-center">
 								<div class="idea-box-inner">
-									<h1 class="text-white bold-heading">Devolopement in Process  </br> We'll Try Our Best</h1>
+									<h1 class="text-white bold-heading">Devolopement in Process </br> We'll Try Our Best
+									</h1>
 									<button type="button" class="btn btn-danger" data-toggle="modal"
 										data-target="#have-an-idea">Contact us</button>
 								</div>
